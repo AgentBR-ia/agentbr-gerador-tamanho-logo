@@ -2,7 +2,7 @@
 
 ![Topo](topo/agentbr-topo-github.png)
 
-Kit rápido para gerar ícones da logo nos formatos usados por app Mac e website.
+Kit rápido para gerar formatos e tamanhos usados por app e extensão
 
 ## Como usar
 
