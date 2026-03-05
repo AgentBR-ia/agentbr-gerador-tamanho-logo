@@ -2,7 +2,10 @@
 
 ![Topo](topo/agentbr-topo-github.png)
 
-Kit rápido para gerar formatos e tamanhos usados por app e extensão
+> [!Informação]
+> Kit rápido para gerar formatos e tamanhos usados por app e extensão
+> Esse fluxo foi pensado para ser simples de **utilizar** e sem dependências extras.
+
 
 ## Como usar
 
@@ -26,8 +29,6 @@ Se houver mais de um arquivo de imagem em `fonte/`, o script para com erro e lis
 - Se a logo não for quadrada, o `sips` pode distorcer; prefira preparar uma versão quadrada antes.
 - PNG em `2048x2048` e válido para pacote de assets; o `.icns` continua limitado ao conjunto padrão até `1024x1024`.
 - Antes de cada execução, o script limpa arquivos antigos em `saida/png`, `saida/ico` e `saida/icns` (preservando `.gitkeep`).
-
-### Esse fluxo foi pensado para ser simples de **utilizar** e sem dependências extras.
 
 ## Saida principal
 
