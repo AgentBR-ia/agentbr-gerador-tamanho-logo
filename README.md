@@ -1,18 +1,8 @@
-# AgentBR Gerador Tamanho Logo
+# Gerador Tamanho Logo
 
 ![Topo](topo/agentbr-topo-github.png)
 
 Kit rápido para gerar ícones da logo nos formatos usados por app Mac e website.
-
-## Estrutura
-
-- `fonte/`: coloque a logo com qualquer nome (ex.: `agentbr-logo-fundo.png`)
-- `scripts/gerar-assets.sh`: script de geração
-- `saida/png/`: aliases web em PNG
-- `saida/png/tamanhos/`: PNGs por tamanho em potencias de 2 (16 ate 2048)
-- `saida/ico/`: `favicon.ico`
-- `saida/icns/`: `app.icns` para app no macOS
-- `topo/agentbr-topo-github.png`: imagem de topo para o README
 
 ## Como usar
 
@@ -48,6 +38,16 @@ Se houver mais de um arquivo de imagem em `fonte/`, o script para com erro e lis
 - `saida/png/tamanhos/<nome-da-logo>-2048x2048.png`
 - `saida/ico/favicon.ico`
 - `saida/icns/app.icns`
+
+## Estrutura
+
+- `fonte/`: coloque a logo com qualquer nome (ex.: `agentbr-logo-fundo.png`)
+- `scripts/gerar-assets.sh`: script de geração
+- `saida/png/`: aliases web em PNG
+- `saida/png/tamanhos/`: PNGs por tamanho em potencias de 2 (16 ate 2048)
+- `saida/ico/`: `favicon.ico`
+- `saida/icns/`: `app.icns` para app no macOS
+- `topo/agentbr-topo-github.png`: imagem de topo para o README
 
 ## Dicas
 
