@@ -6,13 +6,14 @@
 
 >
 > Kit rápido para gerar formatos e tamanhos usados por app e extensão
-> Esse fluxo foi pensado para ser simples de **utilizar** e sem dependências extras.
+> Esse fluxo foi pensado para ser simples de **utilizar**
+> 👉 Formatos exportação: PNG, ICO, ICNS e SVG(com/sem fundo)
 >
 ---
 
 ## Como usar
 
-Autodetectar (quando existir apenas 1 imagem em `fonte/`):
+Detectação automática (quando existir apenas 1 imagem em `fonte/`):
 
 ```bash
 cd agentbr-gerador-tamanho-logo
@@ -25,13 +26,28 @@ Outra forma é colocar o local da imagem:
 ./scripts/gerar-assets.sh /caminho/da/sua-logo.png
 ```
 
-Se houver mais de um arquivo de imagem em `fonte/`, o script para com erro e lista os arquivos encontrados para você escolher um caminho explícito.
+Auto-instalação para **remover fundo** SVG, precisamos das dependências:
+- (ImageMagick + potrace)
 
-## Dicas
+```bash
+./scripts/gerar-assets.sh --install-deps
+./scripts/gerar-assets.sh --install-deps /caminho/da/sua-logo.png
+```
 
-- Se a logo não for quadrada, o `sips` pode distorcer; prefira preparar uma versão quadrada antes.
-- PNG em `2048x2048` e válido para pacote de assets; o `.icns` continua limitado ao conjunto padrão até `1024x1024`.
-- Antes de cada execução, o script limpa arquivos antigos em `saida/png`, `saida/ico` e `saida/icns` (preservando `.gitkeep`).
+>
+> Se houver mais de um arquivo de imagem em `fonte/`, o script para com erro e lista os arquivos encontrados para você escolher um caminho explícito.
+>
+
+## Dicas e limitações
+
+- Se a logo não for quadrada, o redimensionamento força formato quadrado para padronizar ícones.
+- PNG em `2048x2048` e válido para pacote de assets.
+- SVG principal prefere versão vetorial quando `potrace` estiver disponível; se não, usa automaticamente versão embed.
+- SVG vetorial via `potrace` e monocromático, podendo simplificar logos complexas.
+- SVG embed preserva fidelidade visual da arte original.
+- Cor do `-com-fundo.svg` é realizado a captação do canto superior esquerdo; se o canto for transparente, usa `#FFFFFF`.
+- ⚠️ `.icns` é suportado apenas no macOS; em Linux/Windows o script avisa e continua.
+- ⚠️ Antes de cada execução, o script limpa arquivos antigos em `saida/png`, `saida/ico`, `saida/icns` e `saida/svg` (preservando `.gitkeep`).
 
 ## Saida principal
 
@@ -50,6 +66,15 @@ Se houver mais de um arquivo de imagem em `fonte/`, o script para com erro e lis
 - `saida/png/tamanhos/<nome-da-logo>-2048x2048.png`
 - `saida/ico/favicon.ico`
 - `saida/icns/app.icns`
+- `saida/svg/<nome-da-logo>-sem-fundo.svg`
+- `saida/svg/<nome-da-logo>-com-fundo.svg`
+- `saida/svg/<nome-da-logo>-sem-fundo-embed.svg`
+- `saida/svg/<nome-da-logo>-com-fundo-embed.svg`
+
+Quando houver vetorizacao com `potrace`, também serão gerados:
+
+- `saida/svg/<nome-da-logo>-sem-fundo-vetor.svg`
+- `saida/svg/<nome-da-logo>-com-fundo-vetor.svg`
 
 ## Estrutura
 
@@ -59,9 +84,22 @@ Se houver mais de um arquivo de imagem em `fonte/`, o script para com erro e lis
 - `saida/png/tamanhos/`: PNGs por tamanho em potencias de 2 (16 ate 2048)
 - `saida/ico/`: `favicon.ico`
 - `saida/icns/`: `app.icns` para app no macOS
+- `saida/svg/`: SVG com/sem fundo, com fallback embed
 - `topo/agentbr-topo-github.png`: imagem de topo para o README
 
---
+---
+
+>
+> Melhoras futuras:
+> - Opção de escolha de extensão,
+> - Opção de escolha de tamanhos específicos,
+> - Opção de alteração saída do nome dos arquivos.
+> - Terminal Interativo,
+> - Skill para IA's,
+> - Aceitar várias imagens ao mesmo tempo,
+>
+
+---
 
 ## Ajude ao AgentBR a crescer! 🇧🇷
 
@@ -72,4 +110,4 @@ Conheça nossos projetos em [SITE OFICIAL](https://agentbr.ia.br)
 Seja um parceiro/colaborador
 email:[`mailon@agentbr.ia.br`]
 
---
+---
