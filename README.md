@@ -1,6 +1,8 @@
 # Gerador Tamanho Logo
 
-![Topo](topo/agentbr-topo-github.png)
+<p align="center">
+  <img src="topo/agentbr-topo-github.png" alt="AgentBR - Gerador Tamanho Logo" width="100%">
+</p>
 
 >
 > Kit rápido para gerar formatos e tamanhos usados por app e extensão
