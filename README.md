@@ -5,7 +5,7 @@
 </p>
 
 >
-> Kit rápido para gerar formatos e tamanhos usados por app e extensão.
+> Kit rápido para gerar formatos e tamanhos usados por app e extensão./n
 > Esse fluxo foi pensado para ser simples de **utilizar**.
 > 👉 Formatos exportação: PNG, ICO, ICNS e SVG(com/sem fundo).
 >
