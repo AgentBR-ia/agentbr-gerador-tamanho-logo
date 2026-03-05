@@ -4,11 +4,13 @@
   <img src="topo/agentbr-topo-github.png" alt="AgentBR - Gerador Tamanho Logo" width="100%">
 </p>
 
->
-> Kit rápido para gerar formatos e tamanhos usados por app e extensão./n
-> Esse fluxo foi pensado para ser simples de **utilizar**.
-> 👉 Formatos exportação: PNG, ICO, ICNS e SVG(com/sem fundo).
->
+> Kit rápido para gerar formatos e tamanhos usados por app e extensão.
+
+```markdown
+Esse fluxo foi pensado para ser simples de **utilizar**.
+👉 Formatos exportação: PNG, ICO, ICNS e SVG(com/sem fundo).
+```
+
 ---
 
 ## Como usar
