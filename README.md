@@ -2,10 +2,12 @@
 
 ![Topo](topo/agentbr-topo-github.png)
 
-> [Informações]
+> [!Informações]
+>
 > Kit rápido para gerar formatos e tamanhos usados por app e extensão
 > Esse fluxo foi pensado para ser simples de **utilizar** e sem dependências extras.
-
+>
+---
 
 ## Como usar
 
