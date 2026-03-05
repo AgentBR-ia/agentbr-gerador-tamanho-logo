@@ -13,13 +13,21 @@ cd agentbr-gerador-tamanho-logo
 ./scripts/gerar-assets.sh
 ```
 
-Passando caminho explicito da imagem:
+Outra forma é colocar o local da imagem:
 
 ```bash
 ./scripts/gerar-assets.sh /caminho/da/sua-logo.png
 ```
 
 Se houver mais de um arquivo de imagem em `fonte/`, o script para com erro e lista os arquivos encontrados para você escolher um caminho explícito.
+
+## Dicas
+
+- Se a logo não for quadrada, o `sips` pode distorcer; prefira preparar uma versão quadrada antes.
+- PNG em `2048x2048` e válido para pacote de assets; o `.icns` continua limitado ao conjunto padrão até `1024x1024`.
+- Antes de cada execução, o script limpa arquivos antigos em `saida/png`, `saida/ico` e `saida/icns` (preservando `.gitkeep`).
+
+### Esse fluxo foi pensado para ser simples de **utilizar** e sem dependências extras.
 
 ## Saida principal
 
@@ -48,13 +56,6 @@ Se houver mais de um arquivo de imagem em `fonte/`, o script para com erro e lis
 - `saida/ico/`: `favicon.ico`
 - `saida/icns/`: `app.icns` para app no macOS
 - `topo/agentbr-topo-github.png`: imagem de topo para o README
-
-## Dicas
-
-- Se a logo não for quadrada, o `sips` pode distorcer; prefira preparar uma versão quadrada antes.
-- PNG em `2048x2048` e válido para pacote de assets; o `.icns` continua limitado ao conjunto padrão até `1024x1024`.
-- Antes de cada execução, o script limpa arquivos antigos em `saida/png`, `saida/ico` e `saida/icns` (preservando `.gitkeep`).
-- Esse fluxo foi pensado para ser simples de **utilizar** e sem dependências extras.
 
 --
 
